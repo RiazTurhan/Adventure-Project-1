@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body html{
+    overflow-x: hidden;
+}
+:root{
+    --primary:rgba(0, 0, 0, 0.40);
+    --secondery:rgba(0, 0, 0, 0.40);
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.active{
+    color: tomato;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.nav-links li{
+    margin: 30px;
+}
+
+.logo{
+    width: 90px;
+    margin-left: 20px;
+}
+
+
+/* navbar */
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary), var(--secondery))
+    ,url(./bannar\ fina;.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.banner{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.banner h2{
+    font-size: 4vmin;
+}
+
+.line{
+    width: 150px;
+    height: 5px;
+    background-color: tomato;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.banner h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.ctn{
+    padding: 8px 15px;
+    background: tomato;
+    border: 1px solid tomato;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+.menu-btn{
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* events */
+
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(69, 61, 110);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.events .row{
+    margin-top: 50px;
+}
+.event-img{
+    width: 500px;
+    height: 350px;
+}
+
+h4{
+    font-size: 3vmin;
+    color: rgb(36, 42, 71);
+    margin: 20px auto;
+}
+
+p{
+    color: gray;
+    padding: 0px 40px;
+}
+
+.events .ctn{
+    margin-top: 30px;
+}
+
+.explore{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary), var(--secondery))
+    ,url(./new\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.explore-content{
+    width: 60%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.explore-content h1{
+    font-size: 7vmin;
+}
+.explore-content .line{
+    margin-bottom: 50px;
+}
+.explore-content p{
+    color: white;
+}
+
+.explore-content .ctn{
+    margin-top:40px ;
+}
+.content-col{
+    width: 40%;
+}
+.img-col{
+    width: 60%;
+}
+.tours-img{
+    max-width: 250px;
+    height: 180px;
+    margin: 10px;
+}
+
+.tours .img-glry{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.content-col h1{
+    font-size: 7vmin;
+    color: rgb(54, 70, 88);
+}
+
+.content-col .line{
+    margin-left: -1px;
+}
+
+.content-col p{
+    padding: 0;
+    margin: 30px auto;
+}
+
+.content-col .ctn{
+    margin-left: -100px;
+}
+
+.footer{
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background-color: rgb(10, 20, 37);
+    text-align: center;
+}
+
+.footer p{
+    color: whitesmoke;
+    margin: 20px auto;
+    padding: 20px auto;
+    font-size: 15px;
+}
+/* Mobile view */
+
+@media only screen and (max-width:850px){
+    .menu-btn{
+        display: block;
+    }
+    
+    .navbar{
+        padding: 0;
+    }
+
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 50px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: rgb(36, 34, 65);
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius:30%;
+    }
+
+    /* Events */
+
+    .row{
+        flex-direction: column;
+    }
+    .row .col{
+        margin: 20px auto;
+    }
+    .col .img{
+        max-width: 100%;
+    }
+
+    /* explore */
+    .explore-content{
+        width: 100%;
+    }
+
+    /* tours */
+    .tours .col{
+        width: 100%;
+    }
+    .img-glry{
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .img-glry .tours-img{
+        width: 350px;
+        height: 150px;
+        
+        
+    }
+
+    .footer{
+        padding: 10px;
+    }
+}
+
+/* annimation */
+
+.tours-img{
+    transition: transfrom .4s ease;
+}
+
+.tours-img:hover{
+    transform: scale(1.1);
+}
+
+.event-img{
+    transition: transfrom .4s ease;
+}
+
+.event-img:hover{
+    transform: scale(1.1);
+}
+
+.ctn:hover{
+    background-color: whitesmoke;
+    color: tomato;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.322);
+}
+
+li{
+    color: tomato;
+    cursor: pointer;
+}
+
